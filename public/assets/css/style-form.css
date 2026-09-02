@@ -1,0 +1,11 @@
+/* Container do Formulário */
+.card-form {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+
+/* Estilização dos Inputs */
+.form-label { font-weight: 500; color: #495057; }
+.form-control, .form-select { border-color: #dee2e6; padding: 0.6rem 1rem; }
+.form-control:focus, .form-select:focus { border-color: #86b7fe; box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15); }

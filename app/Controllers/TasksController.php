@@ -24,7 +24,7 @@ class TasksController extends BaseController
     // Lista todas as tarefas
     public function index()
     {
-        $data['tasks'] = $this->tasksModel->findAll();
+        $data['tasks'] = $this->tasksModel->orderBy('id', 'ASC')->findAll();
         return view('tasks/index', $data);
     }
 
@@ -62,14 +62,14 @@ class TasksController extends BaseController
     // Mostra o formulário de edição
     public function edit($id)
     {
-        $tasks = $this->tasksModel->find($id);
+        $task = $this->tasksModel->find($id);
 
         // Se o usuário tentar acessar um id que não existe
-        if (!$tasks) {
+        if (!$task) {
             throw PageNotFoundException::forPageNotFound('Tarefa não encontrada');
         }
 
-        $data['tasks'] = $tasks;
+        $data['task'] = $task;
 
         return view('tasks/edit', $data);
     }

@@ -12,7 +12,7 @@ class Tasks extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['tile', 'description', 'status'];
+    protected $allowedFields    = ['title', 'description', 'status'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
