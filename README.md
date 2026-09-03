@@ -20,7 +20,7 @@ Sistema de gerenciamento de tarefas desenvolvido em PHP com CodeIgniter 4 para a
 ### 1. Clone o projeto e entre na pasta:
 ```bash
 
-git clone [https://github.com/WesleyVinicius/gerenciador_tarefas.git](https://github.com/WesleyVinicius/gerenciador_tarefas.git)
+git clone https://github.com/WesleyVinicius/gerenciador_tarefas.git
 cd seu-repositorio
 ```
 
