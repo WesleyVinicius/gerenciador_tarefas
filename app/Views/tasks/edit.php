@@ -62,15 +62,9 @@
         <?php endif; ?>
 
         <div class="card-form shadow-sm p-4 p-md-5">
-            <!-- Ação aponta para o método update passando o ID -->
             <form action="<?= base_url('tasks/update/' . $task['id']) ?>" method="POST">
-
-                <!-- Falsificação de Método para PUT (Padrão RESTful) -->
                 <input type="hidden" name="_method" value="PUT">
-
-                <!-- Token CSRF -->
                 <?= csrf_field() ?>
-
                 <div class="mb-4">
                     <label for="title" class="form-label">Título da Tarefa <span class="text-danger">*</span></label>
                     <!-- O old() verifica primeiro se há erro, se não houver, mostra o dado do banco -->

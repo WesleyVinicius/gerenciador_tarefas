@@ -1,0 +1,32 @@
+### Listar todas as tarefas
+GET http://localhost:8080/api/tasks
+Accept: application/json
+
+### Criar uma nova tarefa
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Tarefa criada pela API",
+  "description": "Testando a criação de uma tarefa por API.",
+  "status": "pendente"
+}
+
+> {%
+    // Lê o JSON de resposta e salva o id numa variável global
+    client.global.set("task_id", response.body.id);
+    client.test("Tarefa criada com sucesso", function() {
+        client.assert(response.status === 201, "A resposta não foi 201");
+    });
+%}
+
+### Atualizar a tarefa recém-criada
+PUT http://localhost:8080/api/tasks/{{task_id}}
+Content-Type: application/json
+
+{
+  "status": "em andamento"
+}
+
+### Deletar a tarefa recém-criada
+DELETE http://localhost:8080/api/tasks/{{task_id}}

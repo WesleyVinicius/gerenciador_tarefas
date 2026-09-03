@@ -3,13 +3,13 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\Tasks;
+use App\Models\TaskModel;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use Psr\Log\LoggerInterface;
 
-class TasksController extends BaseController
+class TaskController extends BaseController
 {
     protected $tasksModel;
 
@@ -18,7 +18,7 @@ class TasksController extends BaseController
     {
         parent::initController($request, $response, $logger);
 
-        $this->tasksModel = new Tasks();
+        $this->tasksModel = new TaskModel();
     }
 
     // Lista todas as tarefas

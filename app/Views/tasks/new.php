@@ -30,12 +30,6 @@
             </a>
         </li>
     </ul>
-
-    <div class="mt-auto">
-        <a href="#" class="nav-link text-muted d-flex align-items-center">
-            <i class="bi bi-box-arrow-right"></i> Sair
-        </a>
-    </div>
 </aside>
 
 <!-- Conteúdo Principal -->
@@ -49,7 +43,7 @@
             </a>
             <div>
                 <h2 class="fw-bold mb-1">Criar Nova Tarefa</h2>
-                <p class="text-secondary mb-0">Preencha os detalhes da tarefa abaixo.</p>
+                <p class="text-secondary mb-0">Preencha os detalhes da tarefa.</p>
             </div>
         </div>
 

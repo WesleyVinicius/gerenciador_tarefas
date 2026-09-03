@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskManager</title>
+    <link rel="icon" href="<?= base_url('favicon.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/bootstrap-icons/bootstrap-icons.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>')">
 </head>
 <body class="d-flex vh-100">
 
-<!-- Menu Lateral (Sidebar) -->
+<!-- Menu Lateral -->
 <aside class="sidebar d-flex flex-column p-4 shadow-sm">
     <a href="/tasks" class="d-flex align-items-center text-dark text-decoration-none mb-5 mt-2">
         <i class="bi bi-check-square text-primary fs-4 me-2"></i>
@@ -29,12 +30,6 @@
             </a>
         </li>
     </ul>
-
-    <div class="mt-auto">
-        <a href="#" class="nav-link text-muted d-flex align-items-center">
-            <i class="bi bi-box-arrow-right"></i> Sair
-        </a>
-    </div>
 </aside>
 
 <!-- Conteúdo Principal -->
@@ -91,18 +86,17 @@
                                 <div class="text-secondary small mt-1"><?= esc($task['description'] ?? 'Sem descrição') ?></div>
                             </td>
 
-                            <!-- Coluna: Status com Badge Customizado -->
+                            <!-- Coluna: Status com Badge -->
                             <td class="text-center align-middle">
                                 <?php
-                                // Usando as cores nativas de alto contraste do Bootstrap 5
-                                $badgeClass = 'text-bg-secondary'; // Fundo amarelo, texto escuro
+                                $badgeClass = 'text-bg-secondary';
                                 $statusLabel = 'Pendente';
 
                                 if ($task['status'] === 'em andamento') {
-                                    $badgeClass = 'text-bg-warning'; // Fundo azul forte, texto branco
+                                    $badgeClass = 'text-bg-warning';
                                     $statusLabel = 'Em andamento';
                                 } elseif ($task['status'] === 'concluída') {
-                                    $badgeClass = 'text-bg-success'; // Fundo verde forte, texto branco
+                                    $badgeClass = 'text-bg-success';
                                     $statusLabel = 'Concluída';
                                 }
                                 ?>
